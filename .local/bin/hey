@@ -1,0 +1,13 @@
+#!/bin/bash
+if [ "$1" == "" ]
+then
+	echo "dude are you retarded"
+	exit 69
+else
+	if [ "$2" == "" ]
+	then
+	sudo "$1"
+	else
+	sudo "$1" "$2"
+        fi
+fi

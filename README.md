@@ -5,7 +5,7 @@ These are my dotfiles - based on terminal tools (or GUI tools) that I use everyd
 First, clone it:
 
 ```bash
-git clone https://github.com/xshotD/dots ~/.dots
+git clone https://github.com/tilda/dots ~/.dots
 ```
 
 You should be able to just simply symlink them:
@@ -13,7 +13,6 @@ You should be able to just simply symlink them:
 ```bash
 ln -s ~/.dots/.vimrc ~/.vimrc
 ln -s ~/.dots/.zshrc ~/.zshrc
-ln -s ~/.dots/.vim ~/.vim
 ln -s ~/.dots/.tmux.conf ~/.tmux.conf
 ```
 

@@ -30,4 +30,14 @@ After install:
 
 - `tmux source-file ~/.tmux.conf`
 
+Optional:
+
+- `hey`
+
+![](https://i-made.theworstme.me/17bb13.gif)
+
+`hey` is a bash program I wrote as a little shorter sudo wrapper.
+
+# And...
+
 You're done, enjoy!

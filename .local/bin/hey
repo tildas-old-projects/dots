@@ -6,8 +6,13 @@ then
 else
 	if [ "$2" == "" ]
 	then
-	sudo "$1"
+		sudo "$1"
 	else
-	sudo "$1" "$2"
+		if [ "$3" == "" ]
+		then
+			sudo "$1" "$2"
+		else
+			sudo "$1" "$2" "$3"
+		fi
         fi
 fi

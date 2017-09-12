@@ -4,23 +4,20 @@
 " Begin init
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call plug#begin('~/.local/share/nvim/plugged')
 " |
 " v Put plugins down there
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'wakatime/vim-wakatime'
-Plugin 'rakr/vim-one'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-fugitive'
-Plugin 'thirtythreeforty/lessspace.vim'
-Plugin 'davidhalter/jedi-vim'
+Plug 'wakatime/vim-wakatime'
+Plug 'rakr/vim-one'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
+Plug 'thirtythreeforty/lessspace.vim'
 
 " Don't put any down here though.
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 colorscheme one-dark
 " vim-airline config

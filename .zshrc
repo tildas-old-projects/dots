@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:/opt/qt/5.9.1/gcc_64/bin:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
@@ -34,9 +34,15 @@ plugins=(nvm)
 GOPATH=~/code/go
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
-figlet -f slant "$(hostname)" | lolcat -a
+itext "$(figlet -f slant "welcome") $(echo "\n")to $(hostname), $USER"
 alias discord="screen -dm chromium-browser --app=https://canary.discordapp.com/channels/@me"
 alias headphones="amixer cset numid=3 1"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+PATH="/home/sst/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/sst/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/sst/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/sst/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/sst/perl5"; export PERL_MM_OPT;

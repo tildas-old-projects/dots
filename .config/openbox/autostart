@@ -1,0 +1,4 @@
+nitrogen --restore &
+kshare -b &
+polybar example -r &
+compton &

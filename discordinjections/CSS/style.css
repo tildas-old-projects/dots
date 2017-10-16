@@ -1,0 +1,58 @@
+
+@import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/autotheme.css");
+@import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/wideGuilds.css");
+@import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/disccord.css");
+@import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/minimalStatusPicker.css");
+@import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/transparent.css");
+/* Settings */
+.app { background: rgba(0, 0, 0, 0.75); }
+body {
+  background-size: cover; background-attachment: fixed;
+  background-position: center; background-repeat: no-repeat;
+  background: url("https://unsplash.it/1360/768?random");
+  backdrop-filter: blur(40px);
+}
+.message-group {
+    border: 0 solid transparent;
+    margin-left: 1.3em;
+}
+
+.message-group .avatar-large {
+    width: 1.25em;
+    height: 1.25em;
+    background-size: 100% auto;
+    border-radius: 20%;
+}
+
+.messages-popout .avatar-large {
+    margin-top: -0.1em !important
+}
+
+.edit-container-outer .avatar-large {
+    visibility: hidden !important
+}
+
+.message-group .old-h2 {
+    margin-top: -1em !important;
+    margin-bottom: 0.5em;
+    margin-left: 0.125em !important
+}
+
+.edit-container-inner .old-h2 {
+    margin-left: 1.375em !important
+}
+
+.comment:not(:first-child) .edit-container-inner .old-h2 {
+    display: none !important
+}
+
+.chat .comment,
+.messages-popout .comment {
+    margin-top: 1em !important;
+    margin-left: -1em !important
+}
+
+.accessory,
+.message-text {
+    margin-left: -1.4em !important
+}

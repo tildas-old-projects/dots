@@ -66,8 +66,9 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = "Material Icons:style=regular:size=8;1"
 
-modules-left = date battery sep memory cpu sep xwindow
-modules-center = plps spotify
+modules-left = date sep memory cpu
+modules-center = xwindow
+modules-right = batterysep plps spotify
 
 ;tray-background = #0063ff
 

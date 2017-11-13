@@ -16,9 +16,10 @@ set $ws1 "1:discord"
 set $ws2 "2:browser"
 set $ws3 "3:terminal"
 set $ws4 "4:steam"
-set $ws5 "5:pycharm"
+set $ws5 "5:etc"
 set $ws6 "6:spotify"
 set $ws7 "7:gimp"
+set $ws8 "8:emacs"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -50,30 +51,6 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -159,17 +136,20 @@ exec "polybar bottom -r"
 exec nm-applet
 exec pasystray
 exec steam
-exec discord-canary
-exec chromium-browser
+exec .local/bin/discord
+exec google-chrome
 exec termite
 exec "kshare -b"
 
 assign [class="Discordinjections-loader"] → "discord"
+assign [class="discord"] → "discord"
 assign [class="Chromium-browser"] → "browser"
+assign [class="Google-chrome"] → "browser"
 assign [class="Xfce4-terminal"] → "terminal"
 assign [class="Termite"] → "terminal"
-assign [class="jetbrains-pycharm-ce"] → "pycharm"
 assign [class="Steam"] → "steam"
 assign [class="Spotify"] → "spotify"
 assign [class="Gimp"] → "gimp"
-assign [class="Emacs24"] → "emacs"
+assign [class="Emacs"] → "emacs"
+assign [class="Hexchat"] → "etc"
+assign [class="MultiMC5"] → "etc"

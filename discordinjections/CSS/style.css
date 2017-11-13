@@ -5,13 +5,21 @@
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/minimalStatusPicker.css");
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/transparent.css");
 /* Settings */
-.app { background: rgba(0, 0, 0, 0.75); }
-body {
-  background-size: cover; background-attachment: fixed;
-  background-position: center; background-repeat: no-repeat;
-  background: url("https://unsplash.it/1360/768?random");
-  backdrop-filter: blur(40px);
+
+.app:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-image: url("https://picsum.photos/1360/768?random&blur");
+    height: 100%;
+    width: 100%;
+    filter: blur(75px);
+    background-size: 100%;
 }
+
 .message-group {
     border: 0 solid transparent;
     margin-left: 1.3em;
@@ -61,3 +69,19 @@ body {
     background-color: rgba(255, 0, 0, 0.4) !important;
     filter: blur(1.7px);
 }
+
+.connecting:before {
+    content: '';
+    filter: blur(20px);
+}
+
+.messages { background-color: #2c2f33; }
+
+#guild-name { color: white; }
+.member-activity-text { color: #aaa;opacity: 0.45; }
+.member-activity-text { opacity: 1; }
+.nameDefaultText-QoumjC { color: #aaa; }
+.nameDefault-Lnjrwm { color: #aaa; }
+.note-UEZmbY { color: #aaa; }
+.description-3MVziF { color: #aaa; }
+.header-1-f9X5 { color: #aaa; } 

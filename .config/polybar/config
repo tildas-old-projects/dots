@@ -180,7 +180,7 @@ interval = 2
 [module/plps]
 type = custom/text
 label-active-font = 3
-content = "%{F#dab} %{A1:playerctl -p spotify play-pause:}   %{A}%{F-}"
+content = "%{F#fff} %{A1:playerctl -p spotify play-pause:}   %{A}%{F-}"
 
 [settings]
 screenchange-reload = true

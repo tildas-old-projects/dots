@@ -27,5 +27,27 @@ end
 
 omf install cmorrell
 # Assuming the user uses Ubuntu or its forks
-omf install apt
-omf install thefuck
+if test -e /usr/bin/apt-get
+    omf install apt
+else
+    echo "apt not installed, skipping apt package"
+end
+if test -e /usr/local/bin/fuck
+    omf install thefuck
+else
+    pip install thefuck
+    omf install thefuck
+end
+if test -e /usr/local/bin/hub
+    omf install hub
+else
+    echo "Downloading hub for x86_64"
+    wget -O /tmp/hub.tar.gz https://github.com/github/hub/releases/download/v2.3.0-pre10/hub-linux-amd64-2.3.0-pre10.tgz
+    echo "Untarring hub"
+    mkdir /tmp/hub-dots
+    tar xf /tmp/hub.tar.gz -C /tmp/hub-dots
+    echo "Running hub installer (you may need to enter your password)"
+    sudo /tmp/hub-dots/hub-linux-amd64-2.3.0-pre10/install
+    echo "Installed hub"
+    omf install hub
+end

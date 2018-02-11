@@ -2,8 +2,8 @@
 " Made on Jul 31st, 2017 and improved ever since.
 
 if !has('nvim')
-    echom "fuck off"
-    echom "cool kids only."
+    echom "This configuration is only for Neovim."
+    echom "Please install Neovim and then try again."
     qa!
 endif
 

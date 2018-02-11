@@ -12,15 +12,26 @@
 set $mod Mod4
 
 # workspaces
-set $ws1 "1:discord"
-set $ws2 "2:browser"
-set $ws3 "3:terminal"
-set $ws4 "4:steam"
-set $ws5 "5:etc"
-set $ws6 "6:spotify"
-set $ws7 "7:gimp"
-set $ws8 "8:emacs"
+# Notes:
+# WS1 is Discord
+# WS2 is Chromium/Firefox/Chrome
+# WS3 is Terminal
+# WS4 is Steam
+# WS5 is whatever
+# WS6 is Spotify
+# WS7 is GIMP
+# and WS8 is Emacs.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
 
+# apparently tilda doesn't wanna float.
+for_window [class="tilda"] floating enable
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:Cousine for Powerline 8
@@ -83,6 +94,9 @@ bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -136,20 +150,35 @@ exec "polybar example -r"
 exec nm-applet
 exec pasystray
 exec steam
-exec .local/bin/discord
-exec termite
+exec ~/.dvm/branches/canary/DiscordCanary/DiscordCanary
+exec alacritty
 exec "kshare -b"
 
-assign [class="Discordinjections-loader"] → "discord"
-assign [class="discord"] → "discord"
-assign [class="Chromium-browser"] → "browser"
-assign [class="Google-chrome"] → "browser"
-assign [class="Firefox"] → "browser"
-assign [class="Xfce4-terminal"] → "terminal"
-assign [class="Termite"] → "terminal"
-assign [class="Steam"] → "steam"
-assign [class="Spotify"] → "spotify"
-assign [class="Gimp"] → "gimp"
-assign [class="Emacs"] → "emacs"
-assign [class="Hexchat"] → "etc"
-assign [class="MultiMC5"] → "etc"
+# Always set your wallpaper
+exec_always nitrogen --restore
+
+# Where the window magic happens
+
+# Discord
+assign [class="Discordinjections-loader"] → $ws1
+assign [class="discord"] → $ws1
+# Browser
+assign [class="Chromium-browser"] → $ws2
+assign [class="Google-chrome"] → $ws2
+assign [class="Firefox"] → $ws2
+# Terminals
+assign [class="Xfce4-terminal"] → $ws3
+assign [class="Termite"] → $ws3
+assign [class="Alacritty"] → $ws3
+# Steam
+assign [class="Steam"] → $ws4
+# Spotify
+assign [class="Spotify"] → $ws6
+assign [class="spotify"] $ws6
+# GIMP
+assign [class="Gimp"] → $ws7
+# Emacs
+assign [class="Emacs"] → $ws8
+# HexChat and MultiMC
+assign [class="Hexchat"] → $ws5
+assign [class="MultiMC5"] → $ws5

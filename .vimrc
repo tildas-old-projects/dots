@@ -1,6 +1,12 @@
 " tilda's dots
 " Made on Jul 31st, 2017 and improved ever since.
 
+if !has('nvim')
+    echom "fuck off"
+    echom "cool kids only."
+    qa!
+endif
+
 " Begin init
 set nocompatible
 filetype off
@@ -22,6 +28,8 @@ Plug 'slashmili/alchemist.vim'
 call plug#end()
 filetype plugin indent on
 colorscheme one-dark
+
+
 " vim-airline config
 let g:airline_theme='onedark'
 let g:airline#extensions#tabline#enabled = 1

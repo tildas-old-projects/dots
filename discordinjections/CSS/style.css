@@ -22,10 +22,6 @@
 
 .guild-seperator { color: #ddd;background-color: #ddd; }
 
-/* Use with Electron window transparency.
- * If you don't want true transparency, uncomment the background-image
- */
-
 .app:before {
     content: "";
     position: fixed;
@@ -40,10 +36,11 @@
     background-size: 100%;
 }
 
-/* Channel topic stuffs */
+/* Channel transparency stuffs */
 .chat {
     background-color: rgba(44, 47, 51, 0.4) !important;
 }
+
 /* Games section theming */
 .activityFeed-HeiGwL {
     background-color: transparent !important;
@@ -96,8 +93,8 @@
     margin-left: -1.4em !important
 }
 
-/* Heck your design choices, Discord! */
-/* First of all, heck the circle button */
+/* Fix roles */
+
 .roleCircle-3-vPZq {
     position: absolute;
     height: 22px;

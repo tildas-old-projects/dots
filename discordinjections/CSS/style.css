@@ -1,39 +1,28 @@
+/* tilda's (sorta) custom discord css
+ * best used with client mods
 
+ * q & a:
+
+ * q: why?
+ * a: aesthetics.
+
+ * q: will this support betterdiscord?
+ * a: fuck off
+
+ * q: how do I use this?
+ * a: set your client mod (or other css patcher) to use this css file
+
+ * any other questions? ask me on discord
+ */
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/autotheme.css");
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/wideGuilds.css");
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/disccord.css");
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/minimalStatusPicker.css");
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/transparent.css");
-/* @import url("https://cdn.rawgit.com/kanadeko/cozy-discord/master/cozy-discord.css"); <== Use with wideguilds removed, this breaks it */
-
-
-/* Settings */
-/* this is broken
-.app.theme-light {
-	visibility: hidden;
-	white-space: pre;
-}
-.app.theme-light:before {
-	content: "Sorry, light theme isn't supported.\A\APress [CTRL] + [,] to change your theme.";
-	visibility: visible !important;
-
-	color: #FFFFFF;
-	text-transform: uppercase;
-	font-size: 26pt;
-	width: 100%;
-	text-align: center;
-	font-weight: bold;
-
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-}
-*/
 
 .guild-seperator { color: #ddd;background-color: #ddd; }
 
-/* Use with `transparency: true` in your DiscordInjections config.json
+/* Use with Electron window transparency.
  * If you don't want true transparency, uncomment the background-image
  */
 
@@ -44,12 +33,20 @@
     right: 0;
     z-index: -1;
     display: block;
-    background-image: url("https://picsum.photos/1360/768?random");
-    background-color: #2c2f33;
+    background-image: url("https://picsum.photos/1360/768?random&blur");
     height: 100%;
     width: 100%;
-    filter: blur(75px) grayscale(50%);
+    filter: blur(10px) grayscale(20%);
     background-size: 100%;
+}
+
+/* Channel topic stuffs */
+.chat {
+    background-color: rgba(44, 47, 51, 0.4) !important;
+}
+/* Games section theming */
+.activityFeed-HeiGwL {
+    background-color: transparent !important;
 }
 
 /* Cozy mode. Displays avatars smaller, while giving the same small thing of compact mode */
@@ -188,8 +185,8 @@ div[class*="unreadBar-"],
 .nameUnreadText-1pxldj { color: #eee !important; }
 .note-UEZmbY { color: #aaa; }
 .description-3MVziF { color: #eee !important; }
-.header-1-f9X5 { color: #ccc !important; }
-.item-3879bf { color: #eee !important; }
+.header-1-f9X5, .subtitle-1diHGV { color: #ccc !important; }
+.item-3879bf, { color: #eee !important; }
 a:link { color: #ddd !important; link-decoration: underline; }
 a:visited { color: #ddd !important; link-decoration: underline; }
 .nameSelectedText-32NDX5 { color: #eee !important; }

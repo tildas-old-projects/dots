@@ -32,12 +32,6 @@ if test -e /usr/bin/apt-get
 else
     echo "apt not installed, skipping apt package"
 end
-if test -e /usr/local/bin/fuck
-    omf install thefuck
-else
-    pip install thefuck
-    omf install thefuck
-end
 if test -e /usr/local/bin/hub
     omf install hub
 else

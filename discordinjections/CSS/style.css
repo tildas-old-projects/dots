@@ -16,7 +16,6 @@
  */
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/autotheme.css");
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/wideGuilds.css");
-@import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/disccord.css");
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/minimalStatusPicker.css");
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/transparent.css");
 
@@ -168,7 +167,8 @@ div[class*="unreadBar-"],
     display: none;
 }
 
-
+/* backdrop blur */
+.backdrop-2ohBEd { filter: blur(10px); }
 
 /* A bunch of fucking themed classes because of the fucking theme and the background stuff aaaaaaaa */
 

@@ -15,9 +15,9 @@
  * any other questions? ask me on discord
  */
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/autotheme.css");
-@import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/wideGuilds.css");
-@import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/minimalStatusPicker.css");
-@import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/assets/transparent.css");
+@import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/plugins/wideGuilds.css");
+@import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/plugins/minimalStatusPicker.css");
+@import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/plugins/transparent.css");
 @import url("./config.addons.css");
 
 .guild-seperator { color: #ddd;background-color: #ddd; }
@@ -170,6 +170,11 @@ div[class*="unreadBar-"],
 
 /* backdrop blur */
 .backdrop-2ohBEd { filter: blur(10px); }
+
+/* Make a little blurple circle thing around the selected guild */
+.guild .selected {
+    border: 2.5px solid #7298da;
+}
 
 /* A bunch of fucking themed classes because of the fucking theme and the background stuff aaaaaaaa */
 

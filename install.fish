@@ -17,11 +17,13 @@ else
     echo "Skipping i3, most likely not installed."
 end
 echo "Installing polybar config"
-if test -d ~/.config/polybar
-    mv ~/.config/polybar/config ~/.config/polybar/config.pre-dots
-    ln -s ~/.config/polybar/config $PWD/.config/polybar/config
-else
-    echo "Skipping polybar, most likely not installed"
+if test -e /usr/local/bin/polybar
+    if test -d ~/.config/polybar
+        mv ~/.config/polybar/config ~/.config/polybar/config.pre-dots
+        ln -s ~/.config/polybar/config $PWD/.config/polybar/config
+    else
+        echo "Skipping polybar, most likely not installed"
+    end
 end
 echo "Installing Oh My Fish"
 curl -sSL http://oh-my.fish | fish

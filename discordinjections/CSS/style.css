@@ -176,6 +176,11 @@ div[class*="unreadBar-"],
     border: 2.5px solid #7298da;
 }
 
+/* Ugly unread color be gone */
+.wrapperUnreadText-2zuiuD {
+	color: #fcfcfc !important
+}
+
 /* A bunch of fucking themed classes because of the fucking theme and the background stuff aaaaaaaa */
 
 #guild-name { color: white; }

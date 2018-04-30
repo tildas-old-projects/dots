@@ -3,4 +3,9 @@
  * @import url("https://cdn.rawgit.com/tilda/dots/master/discordinjections/addons/pragmatafy.css");
  * GLHF!
  */
+/* FYI: The pragmatafy addon automatically falls back to Discord monospace fonts if
+ * Pragmata Pro isn't installed. You can leave this in without harm. */
 @import url("https://cdn.rawgit.com/tilda/dots/master/discordinjections/addons/pragmatafy.css");
+/* This addon is the same as the last one. You can leave this in. No problems at all. */
+/* This one makes *everything* Pragmata Pro. Absolutely fucking everything. */
+@import url("https://cdn.rawgit.com/tilda/dots/master/discordinjections/addons/pragmatafy-everything.css");

@@ -18,7 +18,7 @@
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/plugins/wideGuilds.css");
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/plugins/minimalStatusPicker.css");
 @import url("https://rawgit.com/AlexFlipnote/Discord_Theme/master/plugins/transparent.css");
-@import url("./config.addons.css");
+@import url("https://rawgit.com/tilda/dots/master/discordinjections/config.addons.css");
 
 .guild-seperator { color: #ddd;background-color: #ddd; }
 

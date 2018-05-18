@@ -14,38 +14,54 @@ background-alt = #738699
 ;foreground = ${xrdb:color7:#222}
 foreground = #d9d7ce
 foreground-alt = #555
-primary = #7298da
-secondary = #e60053
+primary = #73d0ff
+secondary = #738699
 alert = #ff3333
 icons = #ffffff
 
 
-[bar/example]
-width = 100%
+[bar/desktops]
+width = 524px
 height = 25
 bottom = true
 radius = 0
+offset-x = 50%
 background = ${colors.background}
 foreground = ${colors.foreground}
-modules-left = date right-power-sep xwindow right-power-sep
-modules-center = i3
-tray-position = right
+modules-center = i3 xwindow
 wm-restack = bspwm
 override-redirect = false
+fixed-center = true
 
 font-0 = "PragmataPro:style=regular:size=8:1"
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-;[module/left-power-sep]
-;type = custom/text
-;content = ""
-;content-foreground = ${colors.background-alt}
+[bar/time]
+width = 555px
+height = 25
+offset-x = 0
+bottom = true
+radius = 0
+tray-position = right
+background = ${colors.background}
+foreground = ${colors.foreground}
+modules-center = mpd right-power-sep date
+fixed-center = true
+wm-restack = bspwm
+override-redirect = false
+font-0 = "PragmataPro:style=regular:size=8:1"
+
+[module/left-power-sep]
+type = custom/text
+content = ""
+content-foreground = ${colors.background-alt}
 
 [module/right-power-sep]
 type = custom/text
 content = ""
 content-foreground = ${colors.background-alt}
+content-padding = 1.5
 
 [module/i3]
 type = internal/bspwm
@@ -87,6 +103,20 @@ label-active-font = 3
 
 label-mode-padding = 5
 
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+
+format-online = <icon-prev> <toggle> <icon-next> <label-song> | <label-time>
+
+label-song = %artist:0:15:...% - %title:0:15:...%
+
+icon-play = 
+icon-pause = 
+icon-prev = 
+icon-next = 
+
 [module/sep]
 type = custom/text
 content = "|"
@@ -119,12 +149,8 @@ interval = 5
 time = %I:%M %p
 time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
-
 label = %time%
-label-padding = 3
+label-padding = 0
 ;label-background = ${colors.background-alt}
 
 [module/battery]

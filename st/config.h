@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "PragmataPro:pixelsize=13:antialias=true:autohint=true";
+static char font[] = "PragmataPro Mono:pixelsize=13:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -83,7 +83,7 @@ static char termname[] = "st-256color";
 static unsigned int tabspaces = 8;
 
 /* bg opacity */
-static const int alpha = 0xdd;
+static const int alpha = 0xf0;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {

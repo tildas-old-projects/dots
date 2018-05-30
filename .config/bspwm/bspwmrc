@@ -1,8 +1,8 @@
 #! /bin/sh
 
+nitrogen --restore
 sxhkd &
 polybar -r desktops &
-polybar -r time &
 kshare -b &
 compton &
 

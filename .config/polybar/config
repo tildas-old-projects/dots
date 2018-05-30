@@ -9,11 +9,12 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #212733
-background-alt = #738699
+background = #88212530
+background-alt = #50212530
+time-bg = #88212539
 ;foreground = ${xrdb:color7:#222}
-foreground = #d9d7ce
-foreground-alt = #555
+foreground = #fff
+foreground-alt = #bbb
 primary = #73d0ff
 secondary = #738699
 alert = #ff3333
@@ -21,47 +22,26 @@ icons = #ffffff
 
 
 [bar/desktops]
-width = 524px
+width = 100%
 height = 25
 bottom = true
 radius = 0
-offset-x = 50%
+offset-x = 0
 background = ${colors.background}
+tray-background = ${colors.background}
 foreground = ${colors.foreground}
-modules-center = i3 xwindow
+modules-left = i3
+modules-center = xwindow
+modules-right = mpdcontrol mpd date
 wm-restack = bspwm
 override-redirect = false
 fixed-center = true
+padding-left = 0
+tray-position = right
 
 font-0 = "PragmataPro:style=regular:size=8:1"
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
-
-[bar/time]
-width = 555px
-height = 25
-offset-x = 0
-bottom = true
-radius = 0
-tray-position = right
-background = ${colors.background}
-foreground = ${colors.foreground}
-modules-center = mpd right-power-sep date
-fixed-center = true
-wm-restack = bspwm
-override-redirect = false
-font-0 = "PragmataPro:style=regular:size=8:1"
-
-[module/left-power-sep]
-type = custom/text
-content = ""
-content-foreground = ${colors.background-alt}
-
-[module/right-power-sep]
-type = custom/text
-content = ""
-content-foreground = ${colors.background-alt}
-content-padding = 1.5
 
 [module/i3]
 type = internal/bspwm
@@ -82,16 +62,16 @@ label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3; 
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;9
-ws-icon-9 = 10;10
+#ws-icon-0 = 1;
+#ws-icon-1 = 2;
+#ws-icon-2 = 3; 
+#ws-icon-3 = 4;
+#ws-icon-4 = 5;
+#ws-icon-5 = 6;
+#ws-icon-6 = 7;
+#ws-icon-7 = 8;
+#ws-icon-8 = 9;9
+#ws-icon-9 = 10;10
 
 format = <label-state> <label-mode>
 index-sort = true
@@ -99,59 +79,48 @@ wrapping-scroll = true
 strip-wsnumbers = true
 pin-workspaces = true
 
-label-active-font = 3
+label-active-font = 0
 
 label-mode-padding = 5
 
 [module/mpd]
+type = custom/script
+exec = ~/.local/bin/mpd-scroll
+tail = true
+interval = 1
+
+label-padding-right = 1
+label-foreground = ${colors.foreground}
+
+[module/mpdcontrol]
 type = internal/mpd
 host = 127.0.0.1
 port = 6600
+interval = 1
 
-format-online = <icon-prev> <toggle> <icon-next> <label-song> | <label-time>
+format-online = <icon-prev> <toggle> <icon-next>
 
-label-song = %artist:0:15:...% - %title:0:15:...%
-
+icon-prev = 
 icon-play = 
 icon-pause = 
-icon-prev = 
 icon-next = 
 
-[module/sep]
-type = custom/text
-content = "|"
-
 [module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
-label-padding = 3
-
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.icons}
-format-underline = #f90000
-label = "cpu - %percentage:2%%"
-
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.icons}
-format-underline = #4bffdc
-label = "mem - %percentage_used%%"
+type = custom/script
+exec = ~/.local/bin/xwindow
+tail = true
+interval = 1
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 time = %I:%M %p
 time-alt = %H:%M:%S
 
 label = %time%
-label-padding = 0
-;label-background = ${colors.background-alt}
+label-padding = 1
+label-background = ${colors.time-bg}
 
 [module/battery]
 type = internal/battery
@@ -179,22 +148,6 @@ animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-foreground = ${colors.icons}
 animation-charging-framerate = 750
-
-[module/spotify]
-type = custom/script
-exec = ~/.local/bin/sp %artist% - %title%
-tail = true
-interval = 2
-
-[module/space]
-type = custom/text
-label-active-font = 0
-content = " "
-
-[module/plps]
-type = custom/text
-label-active-font = 3
-content = "%{F#fff} %{A1:playerctl -p spotify play-pause:}   %{A}%{F-}"
 
 [settings]
 screenchange-reload = true

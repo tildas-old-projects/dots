@@ -35,6 +35,10 @@ if dein#load_state('~/.cache/dein')
   call dein#add('aurieh/discord.nvim')
   call dein#add('mattn/emmet-vim')
   call dein#add('neoclide/vim-easygit')
+  " Rust
+  " Uncomment to enable language support
+  " call dein#add('rust-lang/rust.vim')
+  " call dein#add('racer-rust/vim-racer')
   " Extra stuff: don't touch
   call dein#end()
   call dein#save_state()

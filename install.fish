@@ -9,13 +9,6 @@ if test -e ~/.vimrc
 else
     ln -s ~/.vimrc $PWD/.vimrc
 end
-echo "Installing i3 config"
-if test -d ~/.config/i3
-    mv ~/.config/i3/config ~/.config/i3/config.pre-dots
-    ln -s ~/.config/i3/config $PWD/.config/i3/config
-else
-    echo "Skipping i3, most likely not installed."
-end
 echo "Installing polybar config"
 if test -e /usr/local/bin/polybar
     if test -d ~/.config/polybar

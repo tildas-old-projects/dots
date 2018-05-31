@@ -34,13 +34,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Vimjas/vim-python-pep8-indent')
   call dein#add('aurieh/discord.nvim')
   call dein#add('mattn/emmet-vim')
-  call dein#add('tpope/vim-fugitive')
-  " !! IMPORTANT !!
-  " Always leave this one as the last plugin
-  " in the list.
-  " Otherwise something weird will happen.
-  " Probably.
-  call dein#add('ryanoasis/vim-devicons')
+  call dein#add('neoclide/vim-easygit')
   " Extra stuff: don't touch
   call dein#end()
   call dein#save_state()
@@ -96,3 +90,5 @@ nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
 set number " line numbers.
+set noshowmode " statusline shows mode
+let g:easygit_enable_command = 1 " replace fugitive

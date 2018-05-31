@@ -37,8 +37,10 @@ if dein#load_state('~/.cache/dein')
   call dein#add('neoclide/vim-easygit')
   " Rust
   " Uncomment to enable language support
+  " See also: line 97-99
   " call dein#add('rust-lang/rust.vim')
   " call dein#add('racer-rust/vim-racer')
+
   " Extra stuff: don't touch
   call dein#end()
   call dein#save_state()
@@ -92,6 +94,10 @@ nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
+
+" Rust plugin settings
+" set hidden
+" let g:racer_cmd = "~/.cargo/bin/racer"
 
 set number " line numbers.
 set noshowmode " statusline shows mode

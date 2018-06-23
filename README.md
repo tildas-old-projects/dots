@@ -1,12 +1,9 @@
-# dots
-Hello!
+# Moving projects to GitLab
 
-This is the repository for my configurations and things.
+Hi, stranger. This project has been moved to my GitLab due to the Microsoft acquisition.
 
-# Get Started
-Easy!
-Clone this repository, copy the things you need over to the config folders of yours, and you should be done.
-Although symbolic links would be much better, probably.
+Files will remain on here for transition. However, they will be archived.
 
-# License
-MIT, duh
+For more information go to [moving](https://moving.lmao.tf).
+
+Or visit [the new home of dots](https://gitlab.com/tilda/dots)
